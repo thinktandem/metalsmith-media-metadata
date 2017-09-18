@@ -1,0 +1,28 @@
+{
+  "name": "metalsmith-media-metadata",
+  "version": "0.0.1",
+  "description": "Adds metadata to image and video metalsmith file objects",
+  "main": "index.js",
+  "author": "Filipe Fortes",
+  "license": "MIT",
+  "scripts": {
+    "coverage": "jest --collectCoverage --coverageDirectory ./coverage",
+    "test": "jest"
+  },
+  "dependencies": {
+    "minimatch": "^3.0.4",
+    "node-exiftool": "^2.3.0"
+  },
+  "devDependencies": {
+    "codecov": "^2.3.0",
+    "jest": "^21.1.0",
+    "metalsmith": "^2.3.0",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "__build"
+    ]
+  }
+}
