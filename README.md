@@ -1,4 +1,6 @@
-# metalsmith-media-metadata [![build status](https://travis-ci.org/fortes/metalsmith-media-metadata.svg?branch=master)](https://travis-ci.org/fortes/metalsmith-media-metadata) [![codecov](https://codecov.io/gh/fortes/metalsmith-media-metadata/branch/master/graph/badge.svg)](https://codecov.io/gh/fortes/metalsmith-media-metadata) [![Greenkeeper badge](https://badges.greenkeeper.io/fortes/metalsmith-media-metadata.svg)](https://greenkeeper.io/)
+# metalsmith-media-metadata
+
+[![build status](https://travis-ci.org/fortes/metalsmith-media-metadata.svg?branch=master)](https://travis-ci.org/fortes/metalsmith-media-metadata) [![codecov](https://codecov.io/gh/fortes/metalsmith-media-metadata/branch/master/graph/badge.svg)](https://codecov.io/gh/fortes/metalsmith-media-metadata) [![Greenkeeper badge](https://badges.greenkeeper.io/fortes/metalsmith-media-metadata.svg)](https://greenkeeper.io/)
 
 Adds metadata to image and video metalsmith file objects. Only really useful when used in conjunction with other plugins.
 
