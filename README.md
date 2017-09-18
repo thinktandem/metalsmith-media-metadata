@@ -11,16 +11,25 @@ The output of `exiftool` is added as metadata into the metalsmith file object fo
   'dog.jpg': {
     // Existing file data untouched
     exif: {
-      exiftoolVersionNumber: 9.58,
-      fileType: 'JPEG',
-      mimeType: 'image/jpeg',
-      jfifVersion: 1.01,
-      resolutionUnit: 'None',
-      xResolution: 1,
-      yResolution: 1,
-      imageWidth: 620,
-      imageHeight: 413,
-      // etc...
+      Sharpness: 'Normal',
+      SubjectDistanceRange: 'Unknown',
+      GPSLatitudeRef: 'North',
+      GPSLongitudeRef: 'East',
+      GPSAltitudeRef: 'Above Sea Level',
+      GPSTimeStamp: '14:27:07.24',
+      GPSSatellites: '06',
+      GPSImgDirectionRef: 'Unknown ()',
+      GPSMapDatum: 'WGS-84   ',
+      GPSDateStamp: '2008:10:23',
+      Compression: 'JPEG (old-style)',
+      ThumbnailOffset: 4560,
+      ThumbnailLength: 6702,
+      ImageWidth: 640,
+      ImageHeight: 480,
+      EncodingProcess: 'Baseline DCT, Huffman coding',
+      BitsPerSample: 8,
+      ColorComponents: 3,
+      // Many, many fields...
     }
   }
 }

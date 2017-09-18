@@ -34,7 +34,7 @@ it('adds exif data to images', () => {
   // Exiftool output varies slightly by version, etc. Pick just a few fields to
   // check on.
   expect(files['sample.jpg'].exif).toBeDefined();
-  expect(files['sample.jpg'].exif.ExifImageWidth).toBe(640);
+  expect(files['sample.jpg'].exif.ImageWidth).toBe(640);
   expect(files['sample.jpg'].exif.Flash).toBe('Off, Did not fire');
   expect(files['sample2.jpg'].exif).toBeDefined();
   expect(files['sample2.jpg'].exif.AFAreaMode).toBe('Single Area');
