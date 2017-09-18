@@ -28,10 +28,28 @@ afterAll(() => {
 });
 
 it('adds exif data to images', () => {
-  // If build pipeline failes, `files` never gets assigned
+  // If build pipeline fails, `files` never gets assigned
   expect(files).toBeDefined();
-  expect(files['sample.jpg'].exif).toMatchSnapshot();
-  expect(files['sample2.jpg'].exif).toMatchSnapshot();
+
+  // Exiftool output varies slightly by version, etc. Pick just a few fields to
+  // check on.
+  expect(files['sample.jpg'].exif).toBeDefined();
+  expect(files['sample.jpg'].exif.ExifImageWidth).toBe(640);
+  expect(files['sample.jpg'].exif.Flash).toBe('Off, Did not fire');
+  expect(files['sample2.jpg'].exif).toBeDefined();
+  expect(files['sample2.jpg'].exif.AFAreaMode).toBe('Single Area');
+  expect(files['sample2.jpg'].exif.GPSLongitude).toBe(`11 deg 52' 53.32" E`);
+});
+
+it('adds exif data to video', () => {
+  // If build pipeline fails, `files` never gets assigned
+  expect(files).toBeDefined();
+
+  const data = files['test-mpeg_512kb.mp4'];
+  expect(data.exif).toBeDefined();
+
+  expect(data.exif.TrackDuration).toBe('21.00 s');
+  expect(data.exif.AudioChannels).toBe(2);
 });
 
 it('ignores non-media files', () => {

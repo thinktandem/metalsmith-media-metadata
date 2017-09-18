@@ -20,6 +20,9 @@
     "rimraf": "^2.6.2"
   },
   "jest": {
+    "modulePathIgnorePatterns": [
+      "__build"
+    ],
     "testPathIgnorePatterns": [
       "/node_modules/",
       "__build"

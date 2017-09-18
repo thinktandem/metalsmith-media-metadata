@@ -56,3 +56,5 @@ There is one configuration option:
 ## Miscellaneous
 
 Sample images used in tests taken from [ianare/exif-samples](https://github.com/ianare/exif-samples)
+
+Sample video from the [Internet Archive](https://archive.org/details/test-mpeg)
