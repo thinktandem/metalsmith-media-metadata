@@ -33,7 +33,7 @@ const mediaMetadata = require('metalsmith-media-metadata');
 
 metalsmith.use(mediaMetadata({
   // Only process jpegs
-  path: '*.(jpg|jpeg)'
+  path: '*.+(jpg|jpeg)'
 }));
 ```
 

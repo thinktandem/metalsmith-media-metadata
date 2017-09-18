@@ -21,7 +21,7 @@ module.exports = function(options) {
             return;
           }
 
-          return ep.readMetadata(file).then(results => {
+          return ep.readMetadata(metalsmith.path(file)).then(results => {
             if (results.error) {
               // eslint-disable-next-line no-console
               console.error(`Exiftool error: ${results.error}`);
