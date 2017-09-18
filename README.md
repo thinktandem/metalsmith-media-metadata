@@ -58,6 +58,7 @@ There is one configuration option:
 
 ## Changelog
 
+* `0.0.2`: Package metadata update, no changes
 * `0.0.1`: Initial release
 
 ## Related plugins
