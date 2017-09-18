@@ -21,19 +21,21 @@ module.exports = function(options) {
             return;
           }
 
-          return ep.readMetadata(metalsmith.path(file)).then(results => {
-            if (results.error) {
-              // eslint-disable-next-line no-console
-              console.error(`Exiftool error: ${results.error}`);
-              return;
-            }
+          return ep
+            .readMetadata(metalsmith.path(metalsmith.source(), file))
+            .then(results => {
+              if (results.error) {
+                // eslint-disable-next-line no-console
+                console.error(`Exiftool error: ${results.error}`);
+                return;
+              }
 
-            if (results.data.length) {
-              data.exif = results.data[0];
-            } else {
-              throw new Error('No data returned from exiftool');
-            }
-          });
+              if (results.data.length) {
+                data.exif = results.data[0];
+              } else {
+                throw new Error('No data returned from exiftool');
+              }
+            });
         });
 
         return Promise.all(promises);
