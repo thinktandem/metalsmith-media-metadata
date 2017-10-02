@@ -3,7 +3,7 @@
 const exiftool = require('node-exiftool');
 const {Minimatch} = require('minimatch');
 
-const DEFAULT_PATH = '*.+(gif|jpg|mp4|png)';
+const DEFAULT_PATH = '**/*.+(gif|jpg|mp4|png)';
 
 module.exports = function(options) {
   const matcher = new Minimatch((options && options.path) || DEFAULT_PATH, {

@@ -50,7 +50,7 @@ metalsmith.use(mediaMetadata({
 
 There is one configuration option:
 
-* `path`: [`minimatch`](https://github.com/isaacs/minimatch) *case-insensitive* glob that determines which files get processed (default: `*.+(gif|jpg|mp4|png)`)
+* `path`: [`minimatch`](https://github.com/isaacs/minimatch) *case-insensitive* glob that determines which files get processed (default: `**/*.+(gif|jpg|mp4|png)`)
 
 ## Requirements
 
@@ -58,6 +58,7 @@ There is one configuration option:
 
 ## Changelog
 
+* `0.0.4`: Update default search path to match subdirectories
 * `0.0.3`: Fix bug where paths were not relative to `metalsmith.source()`
 * `0.0.2`: Package metadata update, no changes
 * `0.0.1`: Initial release
