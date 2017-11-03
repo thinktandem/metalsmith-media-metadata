@@ -25,6 +25,7 @@
   "author": "Filipe Fortes <accounts@fortes.com>",
   "dependencies": {
     "minimatch": "^3.0.4",
+    "dist-exiftool": "^10.53.0",
     "node-exiftool": "^2.3.0"
   },
   "devDependencies": {

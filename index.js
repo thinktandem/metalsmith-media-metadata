@@ -1,6 +1,7 @@
 /* eslint-env node */
 
 const exiftool = require('node-exiftool');
+const exiftoolBin = require('dist-exiftool')
 const {Minimatch} = require('minimatch');
 
 const DEFAULT_PATH = '**/*.+(gif|jpg|mp4|png)';
@@ -11,7 +12,7 @@ module.exports = function(options) {
   });
 
   return function(files, metalsmith, done) {
-    const ep = new exiftool.ExiftoolProcess();
+    const ep = new exiftool.ExiftoolProcess(exiftoolBin);
 
     return ep
       .open()
